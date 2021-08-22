@@ -1,0 +1,24 @@
+resized_feature_img1 = cv2.resize(feature_img1, (100, 100)) 
+resized_feature_img1 = cv2.resize(feature_img1, (100, 100)) 
+
+train = []
+train_labels = [0]
+
+train.append(resized_feature_img1)
+train.append(resized_feature_img1)
+
+train = np.array(train)
+#number of images (train.shape[0]) x height (train.shape[1]) x width (train.shape[2]) x number of channels (train.shape[3])
+
+train = np.reshape(train,[1,(train.shape[1]*train.shape[2]*train.shape[3])*2])
+
+
+
+from sklearn.neural_network import MLPClassifier
+
+clf = MLPClassifier(solver='lbfgs', 
+                    alpha=1e-5,
+                    hidden_layer_sizes=(6,), 
+                    random_state=1)
+
+clf.fit(train_data, train_labels)   

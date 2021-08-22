@@ -1,0 +1,5 @@
+cat fail : 621
+cat success: 4378
+dog fail: 3407
+dog success: 1594
+score : 0.5973

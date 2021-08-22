@@ -1,0 +1,5 @@
+cat fail : 4999
+cat success: 0
+dog fail: 0
+dog success: 5001
+0.5

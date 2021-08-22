@@ -1,0 +1,4 @@
+cat fail : 1396
+cat success: 3604
+dog fail: 2527
+dog success: 2473
