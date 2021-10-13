@@ -1,3 +1,5 @@
+import numpy as np
+
 class Classe():
     def __init__(self, nome : str, valor : float):
         self.valor = valor
@@ -19,6 +21,15 @@ class Atributo():
     def calc_com_dois_atributo(self):
         #self.valor_calculado = ...
         pass
+
+def entropia(p):
+	return -(p * np.log2(p) + (1-p) * np.log2((1-p)))
+#entropia(0.95)
+
+def entropia_condicional(p, q):
+    return sum(p[i] * np.log2(p[i]/q[i]) for i in range(len(p)))
+
+#entropia_condicional([0.95,0.05], [0.2,0.8])
 
 
 def povoar(lista: list, classes : list, valores : list):

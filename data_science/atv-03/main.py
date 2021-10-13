@@ -16,7 +16,7 @@ def main():
         return result
 
 
-    start_process(data_1, data_2)
+    print(start_process(data_1, data_2))
 
 if __name__ == "__main__":
     main()
